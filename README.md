@@ -1,10 +1,4 @@
-<style>
-body{
-    font-size: 15px;
-}
-</style>
-
-<body>
+<body style="font-size: 15px;">
 <h1>DBとお友達になろう会</h1>
 <div style="text-align: right">
 主催者：11ax
