@@ -1,0 +1,25 @@
+setup.txtを適用した後に、employeesに対して以下を実行してみよう。
+
+1.INSERT文を実行してみよう。
+INSERT INTO テーブル名 (列名1, 列名2, ...) VALUES (値1, 値2, ...);
+
+※カラム名は省略可能。
+　その場合、値を記述する順序がテーブルのカラムと一致している必要がある。
+
+〇例1
+INSERT INTO employees (employee_id, employee_name, hiredate, department_id) VALUES (2001, '11ax', '2012-04-01', 1);
+
+〇例2
+INSERT INTO employees VALUES (2002, '11be', NULL, 1004, 1001, '2012-04-01', 200000, NULL, 1);
+
+2.UPDATE文を実行してみよう。
+UPDATE テーブル名 SET 列名1 = 値1, 列名2 = 値2, ...[WHERE 条件];
+
+例
+UPDATE employees SET hiredate = '2025-11-15' WHERE employee_id = 2002;
+
+3.DELETE文を実行してみよう。
+DELETE FROM employees [WHERE 条件];
+
+例
+DELETE FROM employees WHERE employee_name = '11ax';

@@ -1,0 +1,11 @@
+1.Oracle Live SQLの登録
+https://livesql.oracle.com/apex/livesql/file/index.html
+
+2.VSCodeのインストール手順
+https://qiita.com/mmake/items/2cf2131a0ab5bc431215
+
+〇終わった後
+・setup.txtを実行
+
+〇エラー対応
+・生成AIに聞く
