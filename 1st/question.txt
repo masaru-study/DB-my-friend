@@ -15,11 +15,11 @@ INSERT INTO employees VALUES (2002, '11be', NULL, 1004, 1001, '2012-04-01', 2000
 2.UPDATE文を実行してみよう。
 UPDATE テーブル名 SET 列名1 = 値1, 列名2 = 値2, ...[WHERE 条件];
 
-例
+〇例
 UPDATE employees SET hiredate = '2025-11-15' WHERE employee_id = 2002;
 
 3.DELETE文を実行してみよう。
 DELETE FROM employees [WHERE 条件];
 
-例
+〇例
 DELETE FROM employees WHERE employee_name = '11ax';
