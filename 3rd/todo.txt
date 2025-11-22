@@ -1,0 +1,58 @@
+1.問題を見て実践してみる・
+1-1.以下のサイトの問題を確認する。(AP H22秋 午前問32)
+https://www.ap-siken.com/kakomon/22_aki/q32.html
+
+1-2. テーブル定義書を見てcreate文を作成し、実行する。
+- 外部キーを設定することに注意する
+
+1-3. 以下のselect文を実行して確認してみる。
+```
+SELECT * FROM 製品;
+SELECT * FROM 在庫;
+```
+
+1-4. 外部キー制約について
+- 以下1-4-1～3のSQL文を実行するとエラーになることを確認する。
+1-4-1.参照元に存在しない外部キーの値を追加(エラー)
+```
+INSERT INTO 在庫 VALUES ('S0006', 'P0007', 100);
+```
+
+1-4-2.参照先の参照されている値を削除(エラー)
+```
+DELETE FROM 製品 WHERE 製品番号 = 'P0001';
+```
+
+1-4-3.参照先の参照されている表を削除(エラー)
+```
+DROP TABLE 製品;
+```
+
+1-4-4.参照元と紐づいてないものは削除できる
+```
+DELETE FROM 製品 WHERE 製品番号 = 'P0006';
+```
+
+1-4-5.スキーマの在庫テーブルのConstraintsに外部キー「製品番号」があることを事前に確認する
+- 以下の「CASCADE CONSTRAINTS」を付けると無理やり削除できる
+- その後、再度、在庫テーブルのConstraintsに外部キーを確認する
+```
+DROP TABLE 製品 CASCADE CONSTRAINTS;
+```
+
+2.外部キー制約をcreate文に追加
+2-1.「ap_create_2_on_delete_cascade.sql」を実行して以下のクエリを実行
+- CASCADEは、外部キー制約の一種で、親テーブルのレコードが更新または削除された際に、関連する子テーブルのレコードも自動的に更新または削除する制約を付与する
+- ON DELETE CASCADE 参照先をdeleteすると、対応する参照元もdeleteされる
+```
+DELETE FROM 製品 WHERE 製品番号 = 'P0001';
+```
+
+2-2.「ap_create_3_on_delete_set_null.sql」を実行して以下のクエリを実行
+- ON DELETE SET NULL 参照先をdeleteすると、対応する参照元の値がNULLにupdateされる
+```
+DELETE FROM 製品 WHERE 製品番号 = 'P0001';
+```
+
+3.少し難しいが、Ping -tで「DDL文」の単元をみんなで解いて解説する
+- 状況を見て難しそうだったら「Select文」の方にする
