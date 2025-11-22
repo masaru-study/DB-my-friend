@@ -8,7 +8,7 @@ CREATE TABLE 製品
 	単価		NUMBER(20)
 );
 
--- 外部キー制約に「ON DELETE RESTRICT」を設定している
+-- 外部キー制約に「ON DELETE SET NULL」を設定している
 -- ON DELETE SET NULL 参照先をdeleteすると、対応する参照元の値がNULLにupdateされる
 CREATE TABLE 在庫
 	(在庫管理番号		VARCHAR2(5) CONSTRAINT pk_在庫管理 PRIMARY KEY,
