@@ -24,6 +24,7 @@ INSERT INTO 製品 VALUES ('P0002', 'Xiaomi 15T', 'Android', 64800);
 INSERT INTO 製品 VALUES ('P0003', 'Google Pixel 10', 'Android', 119800);
 INSERT INTO 製品 VALUES ('P0004', 'Xperia 10 Ⅶ', 'Android', 73500);
 INSERT INTO 製品 VALUES ('P0005', 'Galaxy A25 5G', 'Android', 20980);
+INSERT INTO 製品 VALUES ('P0006', 'AQUOS sense10(紐づけなし)', 'Android', 59900);
 
 INSERT INTO 在庫 VALUES ('S0001', 'P0001', 20);
 INSERT INTO 在庫 VALUES ('S0002', 'P0002', 10);
