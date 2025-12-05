@@ -61,7 +61,7 @@ ALTER TRIGGER seihin_update_cascade DISABLE;
 UPDATE seihin set seihin_id_seihingawa = 'P2001' where seihin_id_seihingawa = 'P0002';
 ```
 
-8. トリガーを再度有効化する。
+9. トリガーを再度有効化する。
 ```
 ALTER TRIGGER seihin_update_cascade ENABLE;
 ```
@@ -75,7 +75,7 @@ SELECT * FROM seihin;
 SELECT * FROM zaiko;
 ```
 
-9. 生成AIに以下の質問を順番に投げる。
+10. 生成AIに以下の質問を順番に投げる。
 * 1つ目
 ```
 update cascadeを使用する場面の具体例をいくつか挙げて教えてください
@@ -86,4 +86,4 @@ update cascadeを使用する場面の具体例をいくつか挙げて教えて
 ID以外の例もいくつか教えてください
 ```
 
-10. Ping -tの「Select文」か「DDL文」の単元をみんなで解きながら解説する
+11. Ping -tの「Select文」か「DDL文」の単元をみんなで解きながら解説する
