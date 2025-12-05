@@ -6,7 +6,7 @@ SELECT * FROM seihin;
 SELECT * FROM zaiko;
 ```
 
-3. 親テーブルseihinのseihin_idを変更し、変更内容を子テーブルのzaikoのseihin_idに反映させたい状況を想像してみる。
+3. 親テーブルseihinのseihin_id_seihingawaを変更し、変更内容を子テーブルのzaikoのseihin_id_zaikogawaに反映させたい状況を想像してみる。
 - 以下を実行すると外部キー制約によりエラーになる
 ```
 UPDATE seihin set seihin_id_seihingawa = 'P1001' where seihin_id_seihingawa = 'P0001';
